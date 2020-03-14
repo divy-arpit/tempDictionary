@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 CallbackTask t=new CallbackTask();
                 new CallbackTask().execute(dictionaryEntries());
                 words=t.definitionSender();
-                Result.setText(t.definitionSender());
+
 
 
             }
@@ -95,6 +95,8 @@ public class MainActivity extends AppCompatActivity {
             catch (Exception e) {
                 e.printStackTrace();
 
+
+
                 return e.toString();
 
             }
@@ -123,6 +125,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
                 JSONObject example = sensesArray.getJSONObject(0);
                 JSONArray defiExample =example.getJSONArray("examples");
                 JSONObject examp= defiExample.getJSONObject(0);
@@ -146,6 +149,7 @@ public class MainActivity extends AppCompatActivity {
         {
             String p;
             p=deff;
+
 
             return (p);
 
