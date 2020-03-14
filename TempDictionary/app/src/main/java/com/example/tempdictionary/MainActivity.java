@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 CallbackTask t=new CallbackTask();
                 new CallbackTask().execute(dictionaryEntries());
                 words=t.definitionSender();
-                Result.setText("hello");
+                Result.setText(t.definitionSender());
 
 
             }
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
     private String dictionaryEntries() {
         final String language = "en-gb";
-        final String word =words ;
+        final String word =wordsearch.getText().toString() ;
         final String fields = "definitions";
         final String strictMatch = "false";
         final String word_id = word.toLowerCase();
